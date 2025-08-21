@@ -1,21 +1,4 @@
-# .github/workflows/main.yml
-name: Python CI/CD Pipeline
-
-on:
- push:
-   branches:
-     - main
- pull_request:
-   branches:
-     - main
-
-jobs:
- build-and-test:
-   runs-on: ubuntu-latest
-
-   steps:
-   - name: Checkout code
-     uses: actions/checkout@v4
+# .github/workflows/main.ymluses: actions/checkout@v4
 
    - name: Set up Python
      uses: actions/setup-python@v5
@@ -42,3 +25,20 @@ jobs:
 
    - name: Display success message
      run: echo "CI/CD Pipeline finished successfully!"
+
+name: Python CI/CD Pipeline
+
+on:
+ push:
+   branches:
+     - main
+ pull_request:
+   branches:
+     - main
+
+jobs:
+ build-and-test:
+   runs-on: ubuntu-latest
+
+   steps:
+   - name: Checkout code
